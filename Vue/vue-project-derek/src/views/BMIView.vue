@@ -1,5 +1,6 @@
 <script setup>
 
+import ProjButton from '@/components/ProjButton.vue';
 import { ref } from 'vue';
 
 const height = ref();
@@ -7,7 +8,8 @@ const weight = ref();
 const bmi = ref();
 const isHidden = ref(true);
 
-function calBMI() {
+function calBMI(eventObj) {
+  console.log(eventObj)
   bmi.value = (weight.value / Math.pow(height.value * 0.01, 2)).toFixed(2);
   isHidden.value = false;
 }
@@ -22,6 +24,7 @@ function calBMI() {
   </div>
   <br />
   <button @click="calBMI()">計算</button>
+  <ProjButton @click="calBMI" type="cal"></ProjButton>
   <br>
   <span v-bind:hidden="isHidden">您的BMI：{{ bmi }}</span>
 

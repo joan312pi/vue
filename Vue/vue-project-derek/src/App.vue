@@ -50,7 +50,22 @@ const bmiUrl = { 'name': 'BMI' };
             <RouterLink class="nav-link" :to="{ 'name': 'ToDoList' }">4.待辦清單</RouterLink>
           </li>
           <li class="nav-item">
+            <RouterLink class="nav-link" :to="{ 'name': 'PokemonList' }">5.圖鑑</RouterLink>
+          </li>
+          <li class="nav-item">
+            <RouterLink class="nav-link" :to="{ 'name': 'ShoppingCart' }">6.購物車</RouterLink>
+          </li>
+          <li class="nav-item">
+            <RouterLink class="nav-link" :to="{ 'name': 'PiniaShoppingCart' }">6-1.Pinia購物車</RouterLink>
+          </li>
+          <li class="nav-item">
             <RouterLink class="nav-link" :to="{ 'name': 'DemoList' }">DemoList</RouterLink>
+          </li>
+          <li class="nav-item">
+            <RouterLink class="nav-link" :to="{ 'name': 'Lifecycle' }">Lifecycle</RouterLink>
+          </li>
+          <li class="nav-item">
+            <RouterLink class="nav-link" :to="{ 'name': 'Parent' }">父子組件</RouterLink>
           </li>
         </ul>
       </div>
@@ -61,6 +76,7 @@ const bmiUrl = { 'name': 'BMI' };
   <div style="margin: auto;width: 80%;">
     <RouterView></RouterView>
   </div>
+
 
 </template>
 

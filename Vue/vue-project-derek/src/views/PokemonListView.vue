@@ -13,7 +13,7 @@ const getTypeDisplay = (type) => {
   return Array.from(type).join("、");
 }
 
-
+// 擴展運算子 => ...
 const a = { 'name': 'derek' };
 // ...a => 'name':'derek'
 
@@ -47,7 +47,7 @@ const test = ref();
 </script>
 
 <template>
-  <input v-model="test">
+  <input v-model="test" :class="null">
   <div class="panel">
     <div v-for="(pokemon, index) in pokemonList" :key="pokemon.number">
       <PokemonCard :name="pokemon.name" :type="pokemon.typeDisplay" :number="pokemon.number">

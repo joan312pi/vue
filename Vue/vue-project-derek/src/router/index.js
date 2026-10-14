@@ -15,13 +15,21 @@ import NotFoundView from "@/views/NotFoundView.vue";
 import DemoListView from "@/views/DemoListView.vue";
 import ScoreView from "@/views/ScoreView.vue";
 import ToDoListView from "@/views/ToDoListView.vue";
+import ScoreView1 from "@/views/ScoreView1.vue";
+import ScoreView2 from "@/views/ScoreView2.vue";
+import LifecycleView from "@/views/LifecycleView.vue";
+import ParentView from "@/views/ParentView.vue";
+import PokemonListView from "@/views/PokemonListView.vue";
+import ShoppingCartView from "@/views/ShoppingCartView.vue";
+import PiniaShoppingCartView from "@/views/PiniaShoppingCartView.vue";
 
 const routes = [
   { path: "/:pathMatch(.*)*", component: NotFoundView, name: "NotFound" },
   {
-    path: "/",
+    path: "/:id?",
     component: HomeView,
     name: "Home",
+    props: true,
   },
   {
     path: "/about",
@@ -52,6 +60,16 @@ const routes = [
     name: "Score",
   },
   {
+    path: "/score1",
+    component: ScoreView1,
+    name: "Score1",
+  },
+  {
+    path: "/score2",
+    component: ScoreView2,
+    name: "Score2",
+  },
+  {
     path: "/demoList",
     component: DemoListView,
     name: "DemoList",
@@ -60,6 +78,31 @@ const routes = [
     path: "/todoList",
     component: ToDoListView,
     name: "ToDoList",
+  },
+  {
+    path: "/lifecycle",
+    component: LifecycleView,
+    name: "Lifecycle",
+  },
+  {
+    path: "/parent",
+    component: ParentView,
+    name: "Parent",
+  },
+  {
+    path: "/pokemonList",
+    component: PokemonListView,
+    name: "PokemonList",
+  },
+  {
+    path: "/shoppingCart",
+    component: ShoppingCartView,
+    name: "ShoppingCart",
+  },
+  {
+    path: "/piniaShoppingCart",
+    component: PiniaShoppingCartView,
+    name: "PiniaShoppingCart",
   },
 ];
 
